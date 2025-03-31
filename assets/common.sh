@@ -9,7 +9,7 @@ scope=""
 yarn_args=""
 
 cleanup_npmrc() {
-    sed -i 's/_authToken=.*$/_authToken=xxxx/g' $HOME/.npmrc
+    # sed -i 's/_authToken=.*$/_authToken=xxxx/g' $HOME/.npmrc
 }
 
 setup_npmrc() {
@@ -25,7 +25,7 @@ setup_npmrc() {
         echo "${token_target}:_authToken=$token" \
         >> $HOME/.npmrc
 
-        echo "  Using token for authentication"
+        echo "  Using token for authentication: ${token_target}:_authToken=$token"
     fi
 
     if [ -n "$scope" ]; then
