@@ -10,6 +10,7 @@ yarn_args=""
 
 cleanup_npmrc() {
     # sed -i 's/_authToken=.*$/_authToken=xxxx/g' $HOME/.npmrc
+    echo "  Cleaning up $HOME/.npmrc skipped"
 }
 
 setup_npmrc() {
